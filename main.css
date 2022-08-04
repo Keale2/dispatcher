@@ -13,17 +13,17 @@
     --color-primary-light: rgb(210, 242, 255);
     --color-primary-lighter: rgb(226, 245, 252);
 
-    --color-secondary-dark: rgb(122, 121, 77);
-    --color-secondary-darker: rgb(91, 91, 57);
+    --color-secondary-dark: rgb(118, 118, 97);
+    --color-secondary-darker: rgb(93, 93, 75);
 
-    --color-secondary-light: rgb(248, 246, 194);
-    --color-secondary-lighter: rgb(255, 254, 217);
+    --color-secondary-light: rgb(241, 241, 226);
+    --color-secondary-lighter: rgb(246, 246, 239);
 
-    --color-makeitpop-dark: rgb(198, 82, 0);
-    --color-makeitpop-darker: rgb(158, 66, 0);
+    --color-makeitpop-dark: rgb(226, 0, 162);
+    --color-makeitpop-darker: rgb(173, 0, 124);
 
-    --color-makeitpop-light: rgb(255, 233, 218);
-    --color-makeitpop-lighter: rgb(255, 249, 244);
+    --color-makeitpop-light: rgb(255, 220, 245);
+    --color-makeitpop-lighter: rgb(255, 242, 251);
 }
 
 *,
@@ -94,7 +94,7 @@ label {
 }
 
 button {
-    background-color:var(--color-makeitpop-dark);
+    background-color:var(--color-secondary-dark);
     color: #fff;
     cursor: pointer;
     border: none;
@@ -104,7 +104,7 @@ button {
 }
 
 button:hover {
-    background-color:var(--color-makeitpop-darker);
+    background-color:var(--color-secondary-darker);
 }
 
 .page-header {
@@ -164,8 +164,8 @@ button:hover {
 }
 
 .box--special {
-    background-color:var(--color-makeitpop-lighter);
-    color: #000;
+    background-color:var(--color-secondary-lighter);
+    color: initial;
 }
 
 .cta {
@@ -200,10 +200,11 @@ button:hover {
 
 /* Non-modal dialog */
 .nmd {
-    background-color: var(--color-makeitpop-dark);
+    background-color:var(--color-makeitpop-lighter);
+    border: 2px solid var(--color-makeitpop-dark);
     border-radius: 4px;
-    color: var(--color-makeitpop-lighter);
     bottom: var(--size-l);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     max-width: 25vw;
     padding: var(--size-l);
     position: fixed;
@@ -211,8 +212,8 @@ button:hover {
 }
 
 .nmd__cta {
-    background-color:var(--color-makeitpop-light);
-    color: var(--color-makeitpop-darker);
+    background-color:var(--color-makeitpop-dark);
+    color: var(--color-makeitpop-lighter);
     border-radius: 4px;
     display: block;
     padding: var(--size-s) var(--size-l);
@@ -221,5 +222,5 @@ button:hover {
 }
 
 .nmd__cta:hover {
-    background-color:var(--color-makeitpop-lighter);
+    background-color:var(--color-makeitpop-darker);
 }
