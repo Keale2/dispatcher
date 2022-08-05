@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&display=swap"
         rel="stylesheet">
+    <script src="dispatcher.js" async></script>
+    <script src="nmd.js" async></script>
 </head>
 
 <body>
@@ -155,8 +157,18 @@
             </aside>
         </div>
     </div>
-    <article class="nmd">
-        <h2>Non-modal Dialog</h2>
+    <article class="nmd" data-trigger="first">
+        <h2>Non-modal Dialog 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis veniam quas harum hic quasi.</p>
+        <a href="#" class="nmd__cta">Do a thing!</a>
+    </article>
+    <article class="nmd" data-trigger="event-dispatcher-timed">
+        <h2>Non-modal Dialog 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis veniam quas harum hic quasi.</p>
+        <a href="#" class="nmd__cta">Do a thing!</a>
+    </article>
+    <article class="nmd" data-trigger="third">
+        <h2>Non-modal Dialog 3</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis veniam quas harum hic quasi.</p>
         <a href="#" class="nmd__cta">Do a thing!</a>
     </article>
@@ -165,6 +177,9 @@
             <p class="copyright">&copy; 2022 - example</p>
         </div>
     </footer>
+    <event-dispatcher data-trigger-type="timed" data-time="2000" data-event-name="first" />
+    <event-dispatcher />
+    <event-dispatcher data-trigger-type="timed" data-time="8000" data-event-name="third" />
 </body>
 
 </html>
